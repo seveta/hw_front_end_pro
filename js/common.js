@@ -5,6 +5,9 @@ const users = [
     ["tyson", "green", 1, ["book", "pen"]],
 ];
 const capitalizeFirstLetter = word => {
+    if (typeof word !== "string" || word.length === 0) {
+        return word;
+    }
     return word[0].toUpperCase() + word.slice(1);
   };
 
@@ -20,17 +23,19 @@ console.log(usernamesWithQuestion);
 
 const redTeamUsers = users.filter(user => user[1] === "red");
 
-let totalScore = 0;
+const totalScore = redTeamUsers.reduce((sum, item) => sum += item[2], 0);
 const tableRows = redTeamUsers.map(user => {
-    totalScore += user[2];
-    return `
-       <tr>
-         <td>${capitalizeFirstLetter(user[0])}</td>
-         <td>${capitalizeFirstLetter(user[1])}</td>
-         <td>${user[2]}</td>
-         <td>${user[3].join("; ")}</td>
-       </tr>`;
-   });
+    return `<tr>
+        ${user
+            .map(item => {
+                item = Array.isArray(item) ?
+                item.join(`; `) : capitalizeFirstLetter(item);
+                return `<td>${item}</td>`
+            })
+            .join(``)
+    }
+    </tr>`;
+});
 const table = `
      <table>
        <thead>
