@@ -1,0 +1,11 @@
+.block {
+    width: 100px;
+    height: 100px;
+    background: black;
+    position:  relative;
+    transition: 0.5s;
+}
+body{
+    margin:0;
+    height: 100vh;
+}
