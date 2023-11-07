@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+th, td {
+    border: 1px solid #000000;
+    padding: 10px;
+  }
+.row__brand{
+    background-color: #7789d8;
+}
+.cell__model{
+    background-color: rgb(201, 88, 88);
+}
+.row__brand, .cell__model{
+    color: #fff;
+    text-align: center;
+}

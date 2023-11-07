@@ -1,0 +1,16 @@
+{
+  "name": "hw_front_end_pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "seveta <musyamew5@gmail.com>",
+  "license": "ISC",
+  "repository": "https://github.com/seveta/hw_front_end_pro.git",
+  "dependencies": {
+    "babel-cli": "6",
+    "babel-preset-react-app": "3"
+  }
+}
